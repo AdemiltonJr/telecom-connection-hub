@@ -23,6 +23,18 @@ export default {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        cta: {
+          DEFAULT: "hsl(var(--cta))",
+          foreground: "hsl(var(--cta-foreground))",
+        },
+        telecom: {
+          DEFAULT: "hsl(var(--telecom))",
+          foreground: "hsl(var(--telecom-foreground))",
+        },
+        "accent-light": {
+          DEFAULT: "hsl(var(--accent-light))",
+          foreground: "hsl(var(--accent-light-foreground))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -34,10 +46,6 @@ export default {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -80,10 +88,38 @@ export default {
             height: "0",
           },
         },
+        "fade-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(30px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-up": "fade-up 0.6s ease-out",
+        "float": "float 3s ease-in-out infinite",
+      },
+      fontFamily: {
+        sans: ['Roboto', 'Lato', 'ui-sans-serif', 'system-ui'],
+        heading: ['Montserrat', 'Poppins', 'ui-sans-serif', 'system-ui'],
+      },
+      boxShadow: {
+        'card': 'var(--shadow-card)',
+        'cta': 'var(--shadow-cta)',
       },
     },
   },
