@@ -1,5 +1,6 @@
 import { Router, Radio, Battery, Signal } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import solutionsBg from '@/assets/solutions-bg.jpg';
 
 const Solutions = () => {
   const solutions = [
@@ -68,8 +69,12 @@ const Solutions = () => {
 
         {/* Additional Info */}
         <div className="mt-16 text-center">
-          <Card className="max-w-4xl mx-auto shadow-card bg-primary">
-            <CardContent className="p-8">
+          <Card className="max-w-4xl mx-auto shadow-card bg-primary relative overflow-hidden">
+            <div 
+              className="absolute inset-0 bg-cover bg-center opacity-20"
+              style={{ backgroundImage: `url(${solutionsBg})` }}
+            />
+            <CardContent className="p-8 relative z-10">
               <h3 className="text-2xl font-bold text-primary-foreground mb-4">
                 Soluções Personalizadas para Cada Desafio
               </h3>
